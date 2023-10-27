@@ -1,0 +1,7 @@
+"Flower_ID","Sepal.W","Petal.W","Diff.W","Countries"
+"flower_1",3.5,0.2,3.3,"DE"
+"flower_2",3,0.2,2.8,"FR"
+"flower_3",3.2,0.2,3,"BE"
+"flower_4",3.1,0.2,2.9,"LU"
+"flower_5",3.6,0.2,3.4,"NL"
+"flower_6",3.9,0.4,3.5,NA

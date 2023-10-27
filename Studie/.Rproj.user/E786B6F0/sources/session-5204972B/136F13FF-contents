@@ -1,0 +1,28 @@
+# Load dataset
+esoph
+
+# Subset the esoph data set to obtain only those rows with 0 cancer cases.
+esoph[which(esoph$ncases > 0), ]
+
+# Subset the esoph data set on the group with the highest tobacco consumption.
+esoph[which(esoph$tobgp == "30+" ), ]
+
+# Now subset the esoph data set on the group with the highest tobacco 
+# consumption AND equal to 0 cases.
+esoph[which(esoph$tobgp == "30+" & esoph$ncases == 0), ]
+
+# Subset the esoph data set on the group with the lowest tobacco consumption OR 
+# the group with the lowest alcohol consumption?
+esoph[which(esoph$tobgp == "0-9g/day" | esoph$alcgp == "0-39g/day"), ]
+
+# Subset the esoph data so that you only include rows in which the control group 
+# has at least 10 observations.
+subset(esoph,ncontrols > 9)
+
+# Can you also subset the data so that you only include rows in which the 
+# control group is larger than twice the number of cases?
+subset(esoph, ncontrols > 2 * ncases)
+
+# Produce the same answer as in exercise 2.2 but now by using the ! sign in your 
+# statement.
+subset(esoph, !ncontrols <= 2 * ncases)
